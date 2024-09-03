@@ -1,0 +1,238 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Company Name TextView -->
+    <TextView
+        android:id="@+id/tvCompanyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PT XYZ"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+    <ImageView
+        android:id="@+id/img_location"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:background="@drawable/location"
+        android:layout_below="@id/tvCompanyName"
+        android:layout_alignStart="@+id/tvCompanyName"
+        android:layout_marginTop="10dp"
+        />
+
+    <!-- Location TextView -->
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleman"
+        android:textSize="16sp"
+        android:textColor="#323232"
+        android:layout_below="@id/tvCompanyName"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@+id/img_location"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Information TextView -->
+    <RelativeLayout
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/info_background"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tvLocation"
+        >
+
+        <TextView
+            android:id="@+id/deskripsi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informasi perubahan data katalog"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="63dp"
+            />
+        <TextView
+            android:id="@+id/deksripsi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembaruan terakhir:"
+            android:textSize="14sp"
+            android:layout_below="@+id/deskripsi1"
+            android:textColor="#757575"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="40dp"
+            />
+        <TextView
+            android:id="@+id/deksripsi3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16-06-2022 15:00:01"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#EE6627"
+            android:layout_toRightOf="@+id/deksripsi2"
+            android:layout_below="@+id/deskripsi1"
+            android:layout_marginTop="6dp"
+            />
+        <TextView
+            android:id="@+id/deksripsi4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembaruan selanjutnya:"
+            android:textSize="14sp"
+            android:layout_below="@+id/deksripsi2"
+            android:textColor="#757575"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="30dp"
+            />
+        <TextView
+            android:id="@+id/deksripsi5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17-06-2022 15:00:01"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#EE6627"
+            android:layout_toRightOf="@+id/deksripsi4"
+            android:layout_below="@+id/deksripsi3"
+            android:layout_marginTop="6dp"
+            />
+    </RelativeLayout>
+    <!--  Layout  -->
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_below="@id/tvInfo"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
+
+        <!-- Katalog Tender Button -->
+        <RelativeLayout
+            android:id="@+id/btnKatalogTender"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/button"
+            android:translationZ="3dp">
+
+            <ImageView
+                android:id="@+id/imgKatalogTender"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/katalog" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgKatalogTender"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Katalog Tender"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <!-- Tender Tersimpan Button -->
+        <RelativeLayout
+            android:id="@+id/btnTenderTersimpan"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_toEndOf="@id/btnKatalogTender"
+            android:background="@drawable/button"
+            android:translationZ="3dp">
+
+            <ImageView
+                android:id="@+id/imgTenderTersimpan"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/tender" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgTenderTersimpan"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Tender Tersimpan"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <!-- Laporan Statistik Button -->
+        <RelativeLayout
+            android:id="@+id/btnLaporanStatistik"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/btnKatalogTender"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/button"
+            android:translationZ="3dp">
+
+            <ImageView
+                android:id="@+id/imgLaporanStatistik"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/statistik" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgLaporanStatistik"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Laporan Statistik"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <!-- Pengaturan Button -->
+        <RelativeLayout
+            android:id="@+id/btnPengaturan"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/btnTenderTersimpan"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@id/btnLaporanStatistik"
+            android:background="@drawable/button"
+            android:translationZ="3dp">
+
+            <ImageView
+                android:id="@+id/imgPengaturan"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/pengaturan" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgPengaturan"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Pengaturan"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
